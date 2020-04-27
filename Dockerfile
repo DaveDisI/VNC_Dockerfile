@@ -26,4 +26,11 @@ RUN  apt-get update \
     && echo "Exec=/headless/.local/share/umake/ide/eclipse/eclipse" >> /usr/share/applications/eclipse-java.desktop \
     && echo "Terminal=false" >> /usr/share/applications/eclipse-java.desktop \
     && echo "Categories=Development;IDE;Programming" >> /usr/share/applications/eclipse-java.desktop \
-    && rm .local/share/applications/eclipse-java.desktop
+    && rm .local/share/applications/eclipse-java.desktop \
+    && cp /usr/share/applications/eclipse-java.desktop /headless/Desktop \
+    && chmod +x /headless/Desktop/eclipse-java.desktop \
+    && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true
+
+
+## switch back to default user
+## USER 1000
