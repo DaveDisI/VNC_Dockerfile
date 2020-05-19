@@ -24,6 +24,9 @@ apt-get update \
     && yes | apt install ./google-chrome-stable_current_amd64.deb \
     && rm /headless/Desktop/firefox.desktop \
     && rm /headless/Desktop/chromium-browser.desktop \
-    && echo "#! /bin/bash" > /headless/Desktop/Google_Chrome \
-    && echo "/usr/bin/google-chrome --no-sandbox" >> /headless/Desktop/Google_Chrome \
-    && chmod +x /headless/Desktop/Google_Chrome \
+    && echo "[Desktop Entry]" > /headless/Desktop/Chrome.desktop \
+    && echo "Type=Application" >> /headless/Desktop/Chrome.desktop \
+    && echo "Name=Chrome" >> /headless/Desktop/Chrome.desktop \
+    && echo "Exec=/usr/bin/google-chrome https://github.com --no-sandbox" >> /headless/Desktop/Chrome.desktop \
+    && echo "Icon=/usr/share/icons/hicolor/64x64/apps/google-chrome.png" >> /headless/Desktop/Chrome.desktop \
+    && chmod +x /headless/Desktop/Chrome.desktop \
