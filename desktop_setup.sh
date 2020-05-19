@@ -21,6 +21,6 @@ apt-get update \
     && chmod +x /headless/Desktop/eclipse-java.desktop \
     && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true \
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
+    && yes | apt install ./google-chrome-stable_current_amd64.deb \
     && cp /usr/share/applications/google-chrome /headless/Desktop \
     && chmod +x /headless/Desktop/google-chrome.desktop \
