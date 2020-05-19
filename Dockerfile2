@@ -1,0 +1,19 @@
+# Custom Dockerfile
+FROM consol/ubuntu-xfce-vnc
+ENV REFRESHED_AT 2018-03-18
+
+# Switch to root user to install additional software
+USER 0
+
+## Install a gedit
+RUN  apt-get update \
+    && apt-get install -y software-properties-common \
+    && add-apt-repository ppa:lyzardking/ubuntu-make \
+    && apt-get update \
+    && apt-get install -y sudo \
+    && apt-get install curl \
+    && curl -o desktop_setup.sh https://raw.githubusercontent.com/League-central/VNC_Dockerfile/master/desktop_setup.sh \
+    && sh desktop_setup.sh
+
+## switch back to default user
+## USER 1000
