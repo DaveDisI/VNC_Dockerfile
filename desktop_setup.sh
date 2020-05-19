@@ -24,6 +24,6 @@ apt-get update \
     && yes | apt install ./google-chrome-stable_current_amd64.deb \
     && rm /headless/Desktop/firefox.desktop \
     && rm /headless/Desktop/chromium-browser.desktop \
-    && echo "#! /bin/bash" > /headless/Desktop/Google_Chrome
-    && echo "/usr/bin/google-chrome --no-sandbox" >> /headless/Desktop/Google_Chrome
+    && echo "#! /bin/bash" > /headless/Desktop/Google_Chrome \
+    && echo "/usr/bin/google-chrome --no-sandbox" >> /headless/Desktop/Google_Chrome \
     && chmod +x /headless/Desktop/Google_Chrome \
