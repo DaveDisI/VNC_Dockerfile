@@ -23,6 +23,6 @@ apt-get update \
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && yes | apt install ./google-chrome-stable_current_amd64.deb \
     && rm /headless/Desktop/firefox.desktop \
-    && rm /headless/Desktop/chromium-browswer.desktop \
+    && rm /headless/Desktop/chromium-browser.desktop \
     && cp /usr/share/applications/google-chrome.desktop /headless/Desktop \
     && chmod +x /headless/Desktop/google-chrome.desktop \
