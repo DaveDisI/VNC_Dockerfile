@@ -2,7 +2,6 @@
 
 apt-get update \
     && add-apt-repository ppa:mmk2410/intellij-idea \
-    && add-apt-repository ppa:lyzardking/ubuntu-make \
     && apt-get install -y git \
     && wget https://download.processing.org/processing-3.5.4-linux64.tgz \
     && tar xfz processing-3.5.4-linux64.tgz \
