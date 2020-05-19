@@ -1,12 +1,6 @@
-# Custom Dockerfile
-FROM consol/ubuntu-xfce-vnc
-ENV REFRESHED_AT 2018-03-18
+#! /bin/bash
 
-# Switch to root user to install additional software
-USER 0
-
-## Install a gedit
-RUN  apt-get update \
+apt-get update \
     && add-apt-repository ppa:mmk2410/intellij-idea \
     && add-apt-repository ppa:lyzardking/ubuntu-make \
     && apt-get install -y git \
@@ -28,6 +22,3 @@ RUN  apt-get update \
     && chmod +x /headless/Desktop/eclipse-java.desktop \
     && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true
 
-
-## switch back to default user
-## USER 1000
