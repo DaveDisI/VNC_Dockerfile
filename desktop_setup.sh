@@ -22,5 +22,5 @@ apt-get update \
     && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true \
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && yes | apt install ./google-chrome-stable_current_amd64.deb \
-    && cp /usr/share/applications/google-chrome /headless/Desktop \
+    && cp /usr/share/applications/google-chrome.desktop /headless/Desktop \
     && chmod +x /headless/Desktop/google-chrome.desktop \
