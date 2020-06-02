@@ -29,7 +29,7 @@ RUN  apt-get update \
     && rm .local/share/applications/eclipse-java.desktop \
     && cp /usr/share/applications/eclipse-java.desktop /headless/Desktop \
     && chmod +x /headless/Desktop/eclipse-java.desktop \
-    && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true
+    && wget -O /headless/.config/bg_sakuli.png https://github.com/jointheleague/league-images/blob/master/League%20desktop.png?raw=true \
     && add-apt-repository ppa:ubuntu-mozilla-security/ppa \
     && apt-get update \
     && apt-get install -y firefox \
