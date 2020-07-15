@@ -7,6 +7,10 @@ apt-get update \
     && tar xfz processing-3.5.4-linux64.tgz \
     && /headless/processing-3.5.4/install.sh \
     && apt-get install -y ubuntu-make \
+    && apt-get install -y python3-tk \
+    && apt-get install -y python3-pil \
+    && apt-get install -y python3-pil.image \
+    && apt-get install -y python3-pil.imagetk \
     && printf .local/share/umake/ide/eclipse | umake ide eclipse \
     && echo "[Desktop Entry]" > /usr/share/applications/eclipse-java.desktop \
     && echo "Version=1.0" >> /usr/share/applications/eclipse-java.desktop \
