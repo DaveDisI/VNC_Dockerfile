@@ -35,6 +35,6 @@ apt-get update \
     && echo "Name=Pycharm" >> /headless/Desktop/pycharm.desktop \
     && echo "Icon=/headless/pycharm-community-2020.2/bin/pycharm.png" >> /headless/Desktop/pycharm.desktop \
     && echo "Exec=/headless/pycharm-community-2020.2/bin/pycharm.sh" >> /headless/Desktop/pycharm.desktop \
-    && echo "Terminal=false" >> /headless/Desktop/pycharm.desktop \cd ..
+    && echo "Terminal=false" >> /headless/Desktop/pycharm.desktop \
     && echo "Categories=Development;IDE;Programming" >> /headless/Desktop/pycharm.desktop \
     && chmod +x /headless/Desktop/pycharm.desktop
