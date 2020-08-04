@@ -27,3 +27,14 @@ apt-get update \
     && add-apt-repository ppa:ubuntu-mozilla-security/ppa \
     && apt-get update \
     && apt-get install -y firefox \
+    && wget https://download.jetbrains.com/python/pycharm-community-2020.2.tar.gz -P /headless \
+    && tar xfz /headless/pycharm-community-2020.2.tar.gz -C /headless \
+    && rm /headless/pycharm-community-2020.2.tar.gz \
+    && echo "[Desktop Entry"] > /headless/Desktop/pycharm.desktop \
+    && echo "Type=Application" >> /headless/Desktop/pycharm.desktop \
+    && echo "Name=Pycharm" >> /headless/Desktop/pycharm.desktop \
+    && echo "Icon=/headless/pycharm-community-2020.2/bin/pycharm.png" >> /headless/Desktop/pycharm.desktop \
+    && echo "Exec=/headless/pycharm-community-2020.2/bin/pycharm.sh" >> /headless/Desktop/pycharm.desktop \
+    && echo "Terminal=false" >> /headless/Desktop/pycharm.desktop \cd ..
+    && echo "Categories=Development;IDE;Programming" >> /headless/Desktop/pycharm.desktop \
+    && chmod +x /headless/Desktop/pycharm.desktop
