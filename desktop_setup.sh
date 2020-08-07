@@ -12,7 +12,7 @@ apt-get update \
     && apt-get install -y python3-pil.image \
     && apt-get install -y python3-pil.imagetk \
     && wget http://mirrors.syringanetworks.net/eclipse/technology/epp/downloads/release/oxygen/3a/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz -P /headless \
-    && rm /headless/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz \ 
+    && tar xfz /headless/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz -C /headless \ 
     && echo "[Desktop Entry"] > /headless/Desktop/eclipse.desktop \
     && echo "Type=Application" >> /headless/Desktop/eclipse.desktop \
     && echo "Name=Eclipse" >> /headless/Desktop/eclipse.desktop \
