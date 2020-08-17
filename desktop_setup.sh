@@ -46,3 +46,4 @@ apt-get update \
     && echo "Terminal=false" >> /headless/Desktop/eclipse.desktop \
     && echo "Categories=Development;IDE;Programming" >> /headless/Desktop/eclipse.desktop \
     && chmod +x /headless/Desktop/eclipse.desktop \
+    && echo "TEST" > /headless/Desktop/test.txt \
